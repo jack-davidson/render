@@ -1,0 +1,61 @@
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<link href="style.css" rel="stylesheet">
+	<title>Render</title>
+</head>
+<body>
+	<div class="panel">
+		<div class="jumbotron">
+			<h1 class="display-4">Render</h1>
+			<p class="lead">Remote blender rendering interface.</p>
+			<hr class="my-4">
+		</div>
+		<div>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<label class="btn btn-secondary active" style="width: 10rem">
+					<input type="radio" name="options" id="singleFrame" autocomplete="off" checked> Single Frame
+				</label>
+			</div>
+			<input id="singleFrameInput" type="text" class="form-control" aria-label="Text input with radio button">
+		</div>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<label class="btn btn-secondary active" style="width: 10rem">
+					<input type="radio" name="options" id="range" autocomplete="off"> Range
+				</label>
+			</div>
+			<div class="input-group-append">
+				<span class="input-group-text">from</span>
+			</div>
+			<input id="rangeFrom" type="text" class="form-control" aria-label="Text input with radio button">
+			<div class="input-group-append">
+				<span class="input-group-text">to</span>
+			</div>
+			<input id="rangeTo" type="text" class="form-control" aria-label="Text input with radio button">
+		</div>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<label class="btn btn-secondary active" style="width: 10rem">
+					<input type="radio" name="options" id="fullAnimation" autocomplete="off"> Full Animation
+				</label>
+			</div>
+		</div>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<label class="btn btn-secondary active">
+					Token
+				</label>
+			</div>
+			<input id="token" type="text" class="form-control" aria-label="Text input with radio button">
+		</div>
+		<div class="input-group input-group-sm mb-3">
+			<input id="fileUpload" type="file" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+		</div>
+		<div class="progress mb-3">
+			<div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+		</div>
+		<button id="render" type="button" class="btn btn-outline-success mb-3">Render</button>
+	</div>
+</body>
